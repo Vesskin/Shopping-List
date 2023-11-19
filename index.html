@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einkaufsliste</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <script src="enter.js"></script>
+  <script src="delete.js"></script>
+  <script src="local_storage.js"></script>
+  <script src="update_ls.js"></script>
+</head>
+
+<body>
+  <section>
+    <nav class="navbar bg-success">
+      <div class="container-fluid ">
+        <a class="navbar-brand col-12 m-auto" href="index.html">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAcpJREFUWEftluFNwzAQhV8nASYBJgEmASahTAJMAkwC+qRe9bj6ErtKRVX1/jRJE/vzu3dnr3RksToyHp0E0L2kR0mvkp5MYa79vlf8F0kP8fI+Cv1sPv6SdGWz8vx5EAoYFrjlGAW6kfQ2AcRfvVABwzd7AwEDFLF2qSWFcj1QDtMNdLmZnF/iTlJcc38r6T2lzH0D8HfDSNe2qB3rVCnDnBi3ilZaXKFeQ3cBeVrywBiZinBl4p2DALlpmQgAypsAogVSAZEyxvM0h/fy89LUbrZs2rk0uEK0AxaTF1g9L4E+bUWjLaEFhDqMGRFA+XkJ5P7JVTSnkC8GdUhvTk31vATy6poycAvOgebg8/8lUJayZ2CUQM3c7Hq+jcLZbkEtn4xCxZ7GngTUaPzpaZVxgWKC3J2ryaIiR1XKG/TseWiuYwcgA5M2gsLIvadayE7hzJV2L5B7ARi2HRSuAt+Rqp1GuyRQQLFqFGulHAA6f9nxlwYKKCbFV4ANxSGA3FdcowbHkIuNtz6mTpWHBKqUmTxRngQQK/RonQD9nXzQW1yhrGqrNfg7+eB2BiKdZ4Xc1GcP5bL91yob2oeWeHmuUy8xx9AYRwf0C5IuhiU3jdqnAAAAAElFTkSuQmCC" />
+          Lucky`s Shopping-List
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAS1JREFUWEftl2EOgjAMRj9uoidRb6InUU+inkRvokcxz4CZONZ18APNmhBI2q2Prx2hjWZmzcx49FdAC0lbSStJa0mP9rpIurXP7gKUKnSQtE9kAw4w4lxWAmTBdABFUF4gSnMNXpmkR0lnSZQQP8rxjOHftSXMUsoLBAxJMfpkE8kCzCkjLgroAeqrs0w0LlD3IGMq9gPMA8SJ4s0xSkQpUhaqiZIoapoHKGxm+sY6Qd74F+zPAFH/7qSYMhcGcAIpJfe3xRQKe6UwV/ayr9LHgHI/fNlZE4GjgMLFOdA58RWo+zQMKTpKoSl6pr9HBbJUrQpVhSwFLH/toaqQpYDlrz1kKcSgwMCQ/GPsjzDWpmP8X+PR0E9+f9gbkzS2dnCi9UwdU0NF96tAlsxPqIxdJRVQV5IAAAAASUVORK5CYII=" />
+          <alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <section class="input_btn">
+          <input id="input" class="artikel-input" type="text" placeholder="Artikel eingeben"
+            onkeypress="handleKeyPress(event)">
+          <button id="add" type="button" class="btn btn-success" onclick="addItem()">Hinzufügen</button>
+  </section>
+
+  <section class="list">
+      <li class="list-group-item list-group-item-success" id="itemList"></li>
+  </section>
+
+</body>
+
+</html>
