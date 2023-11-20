@@ -16,8 +16,8 @@ function addItem() {
         newItem.innerHTML = `
             <div>
                 <span class="item-name">${itemName}</span>
-                <span class="quantity-input">Menge: ${itemQuantity}</span>
-                <span class="price-input">Preis: ${itemPrice}</span>
+                <span class="quantity-input">${itemQuantity}x</span>
+                <span class="price-input">${itemPrice}€</span>
             </div>
             <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Löschen</button>
         `;
@@ -29,8 +29,7 @@ function addItem() {
 
         updateLocalStorage();
 
-        // Hier wird der Gesamtpreis aktualisiert, indem die Menge und der Preis des neuen Artikels hinzugefügt werden
-        gesamtpreis += itemQuantity * itemPrice;
+        // Hier wird der Gesamtpreis aktualisiert
         updateGesamtpreis();
     }
 }

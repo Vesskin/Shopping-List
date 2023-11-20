@@ -1,3 +1,17 @@
+
+body {
+    background-image: url('/img/A\ black-and-whi\ 0.png'); /* Passe hier den Pfad zu deinem Hintergrundbild an */
+    background-attachment: fixed;
+    background-size: cover; /* Optional: Hier wird das Bild so skaliert, dass es den gesamten Bildschirm bedeckt */
+    background-position: center;
+}
+
+nav {
+    border: 2px solid #000000;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
 .navbar-brand {
     font-size: 30px;
     font-weight: 500;
@@ -13,10 +27,12 @@ a {
 }
 
 .artikel-input {
+    border-color: rgb(0, 128, 38) !important;
     margin-top: 10px;
     font-size: 24px;
     width: 20%;
     height: 50px;
+    opacity: 0.8;
 
 }
 
@@ -32,11 +48,11 @@ a {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    opacity: 0.8;
 }
 
 
-
-.btn .btn-success {
+.btn.btn-success {
     margin-left: 10px;
     margin-top: 14px;
     height: 40px;
@@ -50,18 +66,35 @@ a {
 
 
 li {
+    font-weight: 600;
     font-size: 24px;
 }
+
+
 
 .list .list-group {
     border-radius: 20px;
     border: none;
 }
 
+.list-group-item {
+    opacity: 0.8;
+}
+
+#add {
+    border: 1px solid #000000;
+}
+
 #gesamtpreis {
-    
+    border-radius: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #000000;
     font-size: 30px;
+    font-weight: 600;
     text-decoration: underline;
+    background-color: rgba(212, 237, 218, 0.5);
+    
 }
 
 @media screen and (max-width: 900px) {
@@ -72,13 +105,28 @@ li {
    
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
     .navbar-brand {
         font-size: 20px;
         font-weight: 400;
         color: white;
     }
 
-   
+    #input {
+        font-size: 14px;
+        width: 100px;
+    }
+
+    #quantity {
+        font-size: 14px;
+    }
+
+    #price {
+        font-size: 14px;
+    }
+
+    li {
+        font-size: 15px;
+    }
 
 }
