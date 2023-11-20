@@ -20,38 +20,49 @@ a {
 
 }
 
+.center-placeholder::placeholder {
+    text-align: center;
+  }
+
+.left-align-text {
+    text-align: left;
+  }
+
 .input_btn {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
-.btn {
+
+
+.btn .btn-success {
     margin-left: 10px;
     margin-top: 14px;
     height: 40px;
 }
 
-.list {
-    margin-top: 14px;
+.btn-sm {
+    height: 26px;
+    padding: 0.1rem 0.4rem; 
+    font-size: 0.8rem; 
 }
 
+
 li {
-    text-align: center;
     font-size: 24px;
 }
 
+.list .list-group {
+    border-radius: 20px;
+    border: none;
+}
+
 @media screen and (max-width: 900px) {
-    .input_btn {
-        margin-top: 10px;
-        display: flex;
-        justify-content: start;
-    }
 
     #input {
-        width: 200px;
+        width: 140px;
     }
-
    
 }
 
@@ -61,5 +72,7 @@ li {
         font-weight: 400;
         color: white;
     }
+
+   
 
 }

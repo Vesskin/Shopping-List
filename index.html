@@ -34,16 +34,39 @@
     </nav>
   </section>
 
-  <section class="input_btn">
-          <input id="input" class="artikel-input" type="text" placeholder="Artikel eingeben"
-            onkeypress="handleKeyPress(event)">
-          <button id="add" type="button" class="btn btn-success" onclick="addItem()">Hinzufügen</button>
-  </section>
+  <div class="container mt-4">
+    <section class="input_btn">
+      <input id="input" class="artikel-input center-placeholder left-align-text" type="text" placeholder="Dinkelbrot"
+        onkeypress="handleKeyPress(event)">
+      <input id="quantity" class="quantity-input artikel-input center-placeholder left-align-text" type="number"
+        placeholder="Menge" onkeypress="handleKeyPress(event)">
+      <input id="price" class="price-input artikel-input center-placeholder left-align-text" step="0.1" type="number"
+        placeholder="Preis" onkeypress="handleKeyPress(event)">
 
-  <section class="list">
-      <li class="list-group-item list-group-item-success" id="itemList"></li>
-  </section>
+    </section>
+  </div>
 
+  <div class="container mt-4">
+    <section class="input_btn">
+      <button id="add" type="button" class="btn btn-success" onclick="addItem()">Hinzufügen</button>
+
+    </section>
+  </div>
+
+  <div class="container mt-4">
+    <section class="list">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-flush list-group-item-success text-center  " id="itemList"></li>
+      </ul>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <p></p>
+
+    </section>
+  </div>
 </body>
 
 </html>
