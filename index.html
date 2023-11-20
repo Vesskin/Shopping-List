@@ -16,6 +16,7 @@
   <script src="delete.js"></script>
   <script src="local_storage.js"></script>
   <script src="update_ls.js"></script>
+  <script src="totalPrice.js"></script>
 </head>
 
 <body>
@@ -38,9 +39,9 @@
     <section class="input_btn">
       <input id="input" class="artikel-input center-placeholder left-align-text" type="text" placeholder="Dinkelbrot"
         onkeypress="handleKeyPress(event)">
-      <input id="quantity" class="quantity-input artikel-input center-placeholder left-align-text" type="number"
+      <input id="quantity" class="quantity-input artikel-input center-placeholder left-align-text " type="number"
         placeholder="Menge" onkeypress="handleKeyPress(event)">
-      <input id="price" class="price-input artikel-input center-placeholder left-align-text" step="0.1" type="number"
+      <input id="price" class="price-input artikel-input center-placeholder left-align-text " step="0.1" type="number"
         placeholder="Preis" onkeypress="handleKeyPress(event)">
 
     </section>
@@ -61,9 +62,10 @@
     </section>
   </div>
 
-  <div>
+  <div class="container mt-4">
     <section>
-      <p></p>
+      <div id="gesamtpreis" class="d-flex justify-content-end align-items-center mr-3 ">Gesamtpreis: 0.00</div>
+
 
     </section>
   </div>

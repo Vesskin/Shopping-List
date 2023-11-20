@@ -1,10 +1,7 @@
-var tprice = [
 
-]
+var gesamtpreis = 0;
 
-function totalPrice() {
-    var amount = document.getElementById("quantity").value
-    var price = document.getElementById("price").value
-
-    
-} 
+function updateGesamtpreis() {
+    var gesamtpreisElement = document.getElementById("gesamtpreis");
+    gesamtpreisElement.textContent = "Gesamtpreis: " + gesamtpreis.toFixed(2);
+}

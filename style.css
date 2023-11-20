@@ -58,6 +58,12 @@ li {
     border: none;
 }
 
+#gesamtpreis {
+    
+    font-size: 30px;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 900px) {
 
     #input {
