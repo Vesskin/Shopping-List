@@ -4,14 +4,14 @@ function editItem(editButton) {
     var currentQuantity = parseFloat(listItem.getAttribute("data-quantity"));
     var currentPrice = parseFloat(listItem.getAttribute("data-price"));
 
-    var newQuantity = prompt("Enter new quantity:", currentQuantity);
-    var newPrice = prompt("Enter new price:", currentPrice);
+    var newQuantity = prompt("Menge eingeben:", currentQuantity);
+    var newPrice = prompt("Preis eingeben:", currentPrice);
 
-    // Validate the input for new quantity and price
+    
     if (newQuantity !== null && newPrice !== null && !isNaN(newQuantity) && !isNaN(newPrice) && newQuantity > 0 && newPrice > 0) {
         updateItem(listItem, parseFloat(newQuantity), parseFloat(newPrice));
 
-        // Update local storage and total price
+        
         updateLocalStorage();
         updateGesamtpreis();
     }
