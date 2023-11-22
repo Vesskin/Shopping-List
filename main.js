@@ -2,34 +2,39 @@
 
 function addItem() {
     var itemName = document.getElementById("input").value;
-    var itemQuantity = parseFloat(document.getElementById("quantity").value);
-    var itemPrice = parseFloat(document.getElementById("price").value);
+    var itemQuantity = parseFloat(document.getElementById("quantity").value) || 0;
+    var itemPrice = parseFloat(document.getElementById("price").value) || 0;
 
-    if (itemName.trim() !== "" && !isNaN(itemQuantity) && !isNaN(itemPrice) && itemQuantity > 0 && itemPrice > 0) {
-        var newItem = document.createElement("li");
-        newItem.className = "list-group-item list-group-item-success d-flex justify-content-between align-items-center";
+    // Überprüfen auf ungültige Werte
+    if (
+        itemName.trim() !== "" && // Artikelname ist nicht leer
+        !isNaN(itemQuantity) && itemQuantity >= 0 && // Menge ist eine gültige, nicht negative Zahl
+        !isNaN(itemPrice) && itemPrice >= 0 // Preis ist eine gültige, nicht negative Zahl
+    ) {
+        var existingItem = findExistingItem(itemName);
 
-        // Hier wird die Menge und der Preis als Attribute gespeichert
-        newItem.setAttribute("data-quantity", itemQuantity);
-        newItem.setAttribute("data-price", itemPrice);
+        if (existingItem) {
+            updateItem(existingItem, itemQuantity, itemPrice);
+        } else {
+            var newItem = createNewItem(itemName, itemQuantity, itemPrice);
+            document.getElementById("itemList").appendChild(newItem);
+        }
 
-        newItem.innerHTML = `
-            <div>
-                <span class="item-name">${itemName}</span>
-                <span class="quantity-input">${itemQuantity}x</span>
-                <span class="price-input">${itemPrice}€</span>
-            </div>
-            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Löschen</button>
-        `;
-
-        document.getElementById("itemList").appendChild(newItem);
         document.getElementById("input").value = "";
         document.getElementById("quantity").value = "";
         document.getElementById("price").value = "";
 
         updateLocalStorage();
-
-        // Hier wird der Gesamtpreis aktualisiert
         updateGesamtpreis();
+    } else {
+        alert("Bitte geben Sie gültige Werte für Menge und Preis ein.");
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    var itemList = document.getElementById("itemList");
+    itemList.addEventListener("change", function (event) {
+        if (event.target.type === "checkbox") {
+            updateLocalStorage();
+        }
+    });
+});

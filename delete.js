@@ -1,9 +1,7 @@
 function deleteItem(button) {
-  var listItem = button.parentNode;
+  var listItem = button.closest("li");
   listItem.remove();
 
   updateLocalStorage();
-
-  // Hier wird der Gesamtpreis aktualisiert
   updateGesamtpreis();
 }

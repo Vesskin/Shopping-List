@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('/img/A\ black-and-whi\ 0.png'); /* Passe hier den Pfad zu deinem Hintergrundbild an */
+    background-image: url('/img/A\ black-and-whi\ 0.png'); 
     background-attachment: fixed;
     background-size: cover; /* Optional: Hier wird das Bild so skaliert, dass es den gesamten Bildschirm bedeckt */
     background-position: center;
@@ -81,6 +81,12 @@ li {
     opacity: 0.8;
 }
 
+.checkbox-input {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+
 #add {
     border: 1px solid #000000;
 }
@@ -129,4 +135,5 @@ li {
         font-size: 15px;
     }
 
+ 
 }

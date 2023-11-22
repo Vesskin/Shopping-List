@@ -15,4 +15,10 @@ function updateGesamtpreis() {
 
     // Hier wird der Gesamtpreis mit dem Euro-Zeichen rechts neben der Zahl aktualisiert
     document.getElementById("gesamtpreis").textContent = "Gesamtpreis: €" + gesamtpreis.toFixed(2);
+
+    document.getElementById("gesamtpreis").dataset.gesamtpreis = gesamtpreis.toFixed(2);
+
+
+    // Speichern Sie die Gesamtpreis-Änderung im Local Storage
+    updateLocalStorage();
 }
