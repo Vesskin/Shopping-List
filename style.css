@@ -5,7 +5,7 @@
 body {
     background-image: url('/img/A\ black-and-whi\ 0.png'); 
     background-attachment: fixed;
-    background-size: cover; /* Optional: Hier wird das Bild so skaliert, dass es den gesamten Bildschirm bedeckt */
+    background-size: cover; 
     background-position: center;
 }
 
@@ -16,6 +16,7 @@ nav {
 }
 
 .navbar-brand {
+    font-family: 'Kalam', cursive;
     font-size: 30px;
     font-weight: 500;
     color: white;

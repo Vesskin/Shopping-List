@@ -17,7 +17,7 @@ function updateLocalStorage() {
           checked: isChecked
       });
 
-      // Protokolliere den Status der Checkbox für Debugging-Zwecke
+      
       console.log(itemName, isChecked);
   }
 

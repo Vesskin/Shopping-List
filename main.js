@@ -5,11 +5,11 @@ function addItem() {
     var itemQuantity = parseFloat(document.getElementById("quantity").value) || 0;
     var itemPrice = parseFloat(document.getElementById("price").value) || 0;
 
-    // Überprüfen auf ungültige Werte
+    
     if (
-        itemName.trim() !== "" && // Artikelname ist nicht leer
-        !isNaN(itemQuantity) && itemQuantity >= 0 && // Menge ist eine gültige, nicht negative Zahl
-        !isNaN(itemPrice) && itemPrice >= 0 // Preis ist eine gültige, nicht negative Zahl
+        itemName.trim() !== "" && 
+        !isNaN(itemQuantity) && itemQuantity >= 0 && 
+        !isNaN(itemPrice) && itemPrice >= 0 
     ) {
         var existingItem = findExistingItem(itemName);
 
