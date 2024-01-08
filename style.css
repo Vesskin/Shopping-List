@@ -85,6 +85,21 @@ li {
     opacity: 0.8;
 }
 
+.list-group-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list-group-item .d-flex {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-group-item .ml-auto {
+    margin-top: 10px; /* Ändern Sie dies je nach Bedarf */
+}
+
 .checkbox-input {
     transform: scale(1.5);
     margin-right: 10px;
