@@ -12,7 +12,7 @@ function createNewItem(itemName, itemQuantity, itemPrice) {
             <span class="quantity-input">${itemQuantity}x</span>
             <span class="price-input">${itemPrice}€</span>
         </div>
-        <div class="ml-auto"> <!-- ml-auto for pushing buttons to the right -->
+        <div>
             <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Löschen</button>
             <button class="btn btn-primary btn-sm" onclick="editItem(this)">Ändern</button>
         </div>

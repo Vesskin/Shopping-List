@@ -93,11 +93,7 @@ li {
 
 .list-group-item .d-flex {
     justify-content: space-between;
-    width: 100%;
-}
-
-.list-group-item .ml-auto {
-    margin-top: 10px; /* Ändern Sie dies je nach Bedarf */
+    width: 90%;
 }
 
 .checkbox-input {
