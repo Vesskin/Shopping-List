@@ -63,6 +63,7 @@ a {
 }
 
 .btn-sm {
+    margin-top: 10px;
     height: 26px;
     padding: 0.1rem 0.4rem; 
     font-size: 0.8rem; 
@@ -156,5 +157,15 @@ li {
         font-size: 15px;
     }
 
+    
+
  
+}
+
+@media screen and (max-width: 380px) {
+    .list-group-item .d-flex {
+        justify-content: flex-start;
+        width: 90%;
+    }
+
 }
