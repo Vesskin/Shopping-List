@@ -7,13 +7,13 @@ function createNewItem(itemName, itemQuantity, itemPrice) {
 
     newItem.innerHTML = `
         <div class="d-flex align-items-center">
-            <input type="checkbox" class="mr-2 checkbox-input"> 
-            <span class="item-name">${itemName}</span>
-            <span class="quantity-input">${itemQuantity}x</span>
-            <span class="price-input">${itemPrice}€</span>
+            <input type="checkbox" class="mr-1 checkbox-input"> 
+            <span id="artikel" class="item-name">${itemName}</span>
+            <span  class="quantity-input">${itemQuantity}x</span>
+            <span id="preis" class="price-input">${itemPrice}€</span>
         </div>
-        <div>
-            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Löschen</button>
+        <div class="d-flex justify-content-end ">
+            <button id="btnDelete" class="btn btn-danger btn-sm" onclick="deleteItem(this)">Löschen</button>
             <button class="btn btn-primary btn-sm" onclick="editItem(this)">Ändern</button>
         </div>
     `;

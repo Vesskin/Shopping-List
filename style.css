@@ -94,21 +94,38 @@ li {
 
 .list-group-item .d-flex {
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
 }
 
 .checkbox-input {
     transform: scale(1.5);
-    margin-right: 10px;
+    
 }
 
-.quantity-input {
-    margin-left: 10px;
-    margin-right: 10px; 
+
+
+.h5 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    text-decoration: underline;
+    background-color: rgba(212, 237, 218, 0.5);
+    border-radius: 10px;
+  
+    
 }
+
+#artikel {
+    margin-left: -20%;
+}
+
 
 #add {
     border: 1px solid #000000;
+}
+
+#btnDelete {
+    margin-right: 10px;
 }
 
 #gesamtpreis {
@@ -123,12 +140,19 @@ li {
     
 }
 
+#preis {
+    margin-right: 10%;
+}
 
 
 @media screen and (max-width: 900px) {
 
     #input {
         width: 140px;
+    }
+
+    #artikel {
+        margin-left: 1px;
     }
    
 }
@@ -157,15 +181,22 @@ li {
         font-size: 15px;
     }
 
-    
+   
 
  
 }
 
 @media screen and (max-width: 380px) {
-    .list-group-item .d-flex {
-        justify-content: flex-start;
-        width: 90%;
+    #artikel {
+        margin-left: 10px;
+    }
+
+    #preis {
+        margin-left: 10px;
+    }
+
+    .quantity-input {
+        margin-left: 10px;
     }
 
 }
